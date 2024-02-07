@@ -1,0 +1,18 @@
+package PLACE YOU PROJECT NAME HERE;
+
+
+ abstract class Product {
+    String name;
+    double price;
+    int quantity;
+    
+    //abstract methods
+    public abstract void setName(String name);
+    public abstract String getName();
+    public abstract void setPrice(double price);
+    public abstract double getPrice();
+    public abstract void setQuantity(int quantity);
+    public abstract int getQuantity();
+    public abstract void buy(String name, double price, int quantity);
+    
+}
