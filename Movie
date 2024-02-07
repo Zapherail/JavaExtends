@@ -1,0 +1,72 @@
+package PLACE YOU PROJECT NAME HERE;
+
+
+public final class Movie extends Product {
+    String director;
+    String imbd;
+
+    public Movie(){
+        this.name = null;
+        this.price = 0.0;
+        this.quantity = 0;
+        this.director = null;
+        this.imbd = null;
+    }
+    //Setters and getters
+    public void setDirector(String director){
+        this.director = director;
+    }
+    public String getDirector(){
+        return director;
+    }
+    public void setImbd(String imbd){
+        this.imbd = imbd;
+    }
+    public String getImbd(){
+        return imbd;
+    }
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
+
+    @Override
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    @Override
+    public int getQuantity() {
+        return quantity;
+    }
+//override buy method
+    @Override
+    public void buy(String name, double price, int quantity) {
+        quantity--;
+         System.out.println("Thank you for buying movie " + name + "." + "\n" + "New quantity is: " + quantity);
+        
+    }
+    //Override toString method for correct print out
+    @Override
+    public String toString(){
+        return "Name: " + name  + "\n" +  "Price: " + price + "\n" + "Quantity:" + 
+               quantity + "\n" + "Director: " + director + "\n" + "IMBD: " + imbd;
+    }
+
+   
+}
