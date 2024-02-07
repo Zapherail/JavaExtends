@@ -1,0 +1,50 @@
+package PLACE YOUR PROJECT NAME HERE
+
+import java.util.ArrayList;
+
+public class Store {
+    //create ArrayList
+    ArrayList<Product>products = new ArrayList<>();
+    
+    public  ArrayList<Product> addProduct(Product item){
+        //Add items to products list
+        products.add(item);
+        return products;
+    }
+    public ArrayList<Product> searchProductName(String name) {
+        //new ArrayList to store searched items in
+        ArrayList<Product> searchedItems = new ArrayList<>();
+        //For loop to find items that matched by name
+        for(Product product : products){
+            if(product.getName().toLowerCase().contains(name.toLowerCase())){
+                //adds all names to new ArrayList called searchedItems
+                searchedItems.add(product);
+            }
+        }
+        return searchedItems;
+    }
+    public static void main(String[] args){
+        Movie movie = new Movie();
+        Ebook Ebook = new Ebook();
+        
+        //Testing output
+        movie.setName("The Matrix");
+        movie.setPrice(9.99);
+        movie.setQuantity(33);
+        movie.setDirector("Lana Wachowski");
+        movie.setImbd("tt0133093");
+        
+        Ebook.setName("Moby Dick");
+        Ebook.setPrice(1.99);
+        Ebook.setQuantity(999);
+        Ebook.setAuthor("Herman Melville");
+        Ebook.setIsbn("1503280780");
+        
+        Store store = new Store();
+        store.addProduct(Ebook);
+        store.addProduct(movie);
+        
+        ArrayList<Product> result = store.searchProductName("The");
+        System.out.print(result);
+    }
+}
