@@ -1,0 +1,68 @@
+package PLACE YOU PROJECT NAME HERE;
+
+
+public final class Ebook extends Product {
+     String isbn;
+     String author;
+    
+     public Ebook(){
+         this.name = null;
+         this.price = 0.0;
+         this.quantity = 0;
+         this.isbn = null;
+         this.author = null;
+     }
+     //setters and getters
+    public void setAuthor(String author){
+        this.author = author;
+    }
+    public String getAuthor(){
+        return author;
+    }
+    public void setIsbn(String isbn){
+        this.isbn = isbn;
+    }
+    public String getIsbn(String isbn){
+        return isbn;
+    }
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+    @Override
+    public double getPrice() {
+        return price;
+    }
+
+    @Override
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
+    @Override
+    public int getQuantity() {
+        return quantity;
+    }
+// overriding the buy method
+   @Override
+    public void buy(String name, double price, int quantity) {
+        System.out.println("Thank you for buying EBook " + name + ".");
+    }
+    //overriding the ToString method for correct print out
+     @Override
+    public String toString(){
+        return "Name: " + name  + "\n" +  "Price: " + price + "\n" + "Quantity:" + quantity + "\n" + 
+                "Author: " + author + "\n" + "ISBN: " + isbn;
+}
+}
